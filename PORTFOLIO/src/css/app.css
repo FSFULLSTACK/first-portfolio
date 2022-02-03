@@ -3,3 +3,8 @@
     --primay-color: #2666CF;
     --secondary-color: #395B64;
 }
+
+.container {
+
+    width: 100%;
+}
