@@ -1,86 +1,265 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-/*variables globaux*/
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&family=Syne+Tactile&display=swap');
+/*variables globaux */
+ 
 :root{
 
-    --text-color: #B33030;
-    --bg-color: #395B64;
-    --color: #F5F2E7;
-    --font-family:'Montserrat', sans-serif;
+    --primary-color:#0B0C10;
+    --secondary-color:#1F2833;
+    --ui-color:#C5C6C7;
+    --text-color-primary:#66FCF1;
+    --text-color-secondary:#45A29E;
+    --font-family : 'Open Sans', sans-serif;
 }
 
+/* initialisation selecteur universelle */
 *,
 *::before,
 *::after{
 
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    margin:0;
+    padding:0;
 }
 
 html{
 
     font-size: 62.5%;
 }
+
 body{
 
-    font-family: var(--font-family);
+    
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
-/* Nav bar style */
 
-header{
-
-    width: 100%;
-    height: 800px;
-    background-color: var(--bg-color);
+.Bg{
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0,0,0,0.8)), url(/PORTFOLIO/Img/fotis-fotopoulos-LJ9KY8pIH3E-unsplash.jpg);
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    
+}
+#sidebar{
+    width: 250px;
+    height: 100vh;
+    min-height: 800px;
+    padding: 2rem;
+    position: fixed;
+    border-right: 2px solid var(--text-color-secondary);
+    
+   
 }
 
-.topbar{
-    background-color: red;
+.logo{
     width: 100%;
-    height: 300px;
-  
+    height: auto;
+    text-align: center;
+    margin-top: 1rem;
 }
 
-.header-bar{
+.logo img{
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+}
 
-    background-color: rosybrown;
+.navigation{
+    
     width: 100%;
-    position: absolute;
+    height: auto;
+    font-size: 2.2rem;
+}
+
+.navigation ul{
+    list-style-type: none;
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.navigation ul li{
+    padding: 3rem;
+}
+.navigation ul li a{
+    text-decoration: none;
+    color: var(--ui-color);
+    transition: all 0.2s ease-out;
+    font-weight: 700;
+}
+
+.logo i{
+    font-size: 7rem;
+    color: var(--text-color-secondary);
+}
+
+.navigation ul li a:hover{
+    color: var(--text-color-secondary);
+}
+
+.bloc{
+    width: 100%;
+    height: 10%;
+}
+
+.bloc li::after{
+    content: '';
+    display: block;
+    width: 0%;
+    margin: 5px auto 0 auto;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--text-color-secondary);
+    transition: all 0.2s ease-out;
+}
+.bloc li::before{
+    content:'';
+    display: block;
+    width: 0px;
+    margin: 5px auto 0 auto;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--text-color-secondary);
+    transition: 0.2s ease-out;
+}
+
+.bloc li:hover::after{
+    width: 80%;
+}
+
+.bloc li:hover::before{
+    width: 80%;
+}
+
+#header {
+
+    width:100%;
+    height: 100vh;
+    min-height: 900px;
+    position: relative ;  /*afin de positionner l'element parent*/
+    left: 250px ; /*afin de pousser le parent à gauche */
+
+    /*L'ajout d'une backgound image en CSS*/
+    background: ;
+    background-repeat:no-repeat ;
+    background-size:cover ;
+    z-index: -1;
+}
+
+.heading{
+
+    padding: 30px;
+    margin:0px ;
+    font-family: 'Roboto Mono', monospace;
+    margin-bottom: -4rem;
+}
+
+.heading .title{
+
+    font-size:20px ;
+    margin:0px;
+    padding-top:150px ;
+    color: var(--text-color-secondary) ;
+    text-transform: uppercase;
+    margin-left: 3rem;
     
 }
 
-.logo-contact{
+.heading .text {
 
-    top:5px;
-    float: left;
-    font-size: 2rem;
-    margin-top: 1rem;
+    font-size:20px;
+    margin:30px;
+    color:var(--text-color-secondary);
+}
+
+.btns{
+    margin: 1rem 0 0 7rem;
+    margin-left: 6rem;
+}
+
+.btn{
+
+    height:100px ;
+    text-decoration:none ;
+    background:var(--text-color-primary);
+    color: var(--secondary-color);
+    font-size:20px;
+    padding:5px;
+    margin:2px ;
+    font-weight: 600;
+    border:2px solid var(--text-color-primary);
+
+    /*CSS animation */
+    transition: all 0.2s ease-in-out;
+}
+
+.transparent{
+
+    background:transparent;
+    border:2px solid var(--ui-color);
+    color: var(--ui-color);
+    
+}
+
+
+.medias{
+
+    width: 200px ;
+    position:absolute;
+    margin:30px;
     margin-left: 5rem;
 }
-.fa-brands{
-    padding-left: 2rem;
+
+.medias a {
+
+    font-size:40px;
+    text-decoration:none;
+    padding:10px;
+
 }
 
-.phone-mail{
+.medias a i {
 
-    float: right;
-    font-size: 1rem;
-    margin: 0 5rem 0 0;
+    color:var(--ui-color);
+    transition: all 0.4s ease-in-out;
+}
+
+
+.medias a i:hover{
+
+    color: var(--text-color-secondary);
+}
+
+
+/*Button click to bottom */
+.btn-rond{
+
+    width:70px;
+    height: auto;
+    position: absolute;
+    bottom:20px;
+    left:60px;
+    border-radius: 50%;
+    cursor:pointer;
+    box-shadow: 0 0 0 0 var(--text-color-primary);
+    background: var(--secondary-color);
+    animation:pulse 1.3s infinite;
+    text-align: center;
+    padding:1rem;
+}
+
+.btn-rond img{
+
+    width:50px;
+    height: 50px;
     
 }
 
-.phone{
-
-    float: left;
-    padding: 10px;
-
-}
-
-.mail{
-    float: right;
-    padding: 10px;
+/*How to create your own animation*/
+@keyframes pulse
+{
+    to{
+        box-shadow:  0 0 0 8px rgba(69,162,158,0.01);
+    }
 }
