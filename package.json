@@ -1,0 +1,19 @@
+{
+  "name": "first-portfolio",
+  "version": "1.0.0",
+  "description": "<div id=\"navbar\">                 <!-- Home logo-->                 <div class=\"logoh\">                     <i class=\"fa-solid fa-house\"></i>                 </div>                 <!-- Mon logo personnel -->                 <div class=\"logo\">                     <img src=\"/PORTFOLIO/Img/holding.png\" alt=\"logo\">                 </div>                 <!-- navigation -->                 <nav class=\"navigation\">                     <ul class=\"item-list\">                         <li><a href=\"#\">services</a></li>                         <li><a href=\"#\">Competences</a></li>                         <li><a href=\"#\">A propos</a></li>                         <li><a href=\"#\">contact</a></li>                     </ul>                 </nav>             </div>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FSFULLSTACK/first-portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FSFULLSTACK/first-portfolio/issues"
+  },
+  "homepage": "https://github.com/FSFULLSTACK/first-portfolio#readme"
+}

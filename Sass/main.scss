@@ -1,0 +1,22 @@
+@import "/Sass/utils/variables";
+@import "/Sass/utils/fuctions";
+@import "/Sass/utils/mixins";
+@import "/Sass/utils/extensions";
+
+@import "/Sass/vendors";
+
+@import "/Sass/base/base";
+@import "/Sass/base/typography";
+
+@import "/Sass/components/buttons";
+
+@import "/Sass/layout/header";
+@import "/Sass/layout/nav";
+@import "/Sass/layout/container";
+@import "/Sass/layout/form";
+
+@import "/Sass/pages/work";
+@import "/Sass/pages/about";
+@import "/Sass/pages/project";
+
+@import "/Sass/themes";
